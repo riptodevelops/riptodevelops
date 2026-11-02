@@ -1,0 +1,16 @@
+{
+  "name": "ripto-develops",
+  "version": "1.4.2-beta",
+  "description": "Developer-first AI Agent & Cloud Workflow Orchestration Engine",
+  "type": "module",
+  "main": "server.mjs",
+  "scripts": {
+    "start": "node server.mjs",
+    "dev": "node server.mjs"
+  },
+  "author": "Ritik <ritik@riptodevelops.xyz>",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
