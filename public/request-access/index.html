@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ripto Develops — AI Agent & Cloud Workflow Orchestration</title>
+  <meta name="description" content="Build, deploy, and scale autonomous AI workflows. Deploy isolated micro-VM sandboxes on AWS Nitro without managing Kubernetes.">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='%23fff'%3E%3Cpolygon points='50,8 92,88 8,88'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<!-- ─── NAVIGATION ─── -->
+<header class="nav">
+  <div class="nav-inner">
+    <div class="nav-left">
+      <div class="nav-logo" id="go-home" role="button" tabindex="0">
+        <span class="nav-logo-text">Ripto Develops</span>
+      </div>
+    </div>
+    <ul class="nav-center">
+      <li><button type="button" data-scroll="features">Features</button></li>
+      <li><button type="button" data-scroll="architecture">Architecture</button></li>
+      <li><button type="button" data-scroll="pricing">Pricing</button></li>
+      <li><button type="button" id="nav-changelog">Changelog</button></li>
+    </ul>
+    <div class="nav-right">
+      <button type="button" class="btn-signin-nav btn-secondary" id="btn-signin">Sign in</button>
+      <button type="button" class="btn-request-nav btn-white" id="btn-request-nav">
+        Request Access
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ─── MAIN ─── -->
+<main class="main">
+
+<!-- ═══════════ VIEW: HOME ═══════════ -->
+<div id="v-home" class="view on">
+
+  <!-- Ambient Glow Background -->
+  <div class="hero-glow-container">
+    <div class="hero-glow-cone"></div>
+    <div class="hero-grid-overlay"></div>
+    <div class="hero-fade-bottom"></div>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-inner">
+      <h1 class="hero-heading hero-enter hero-enter-d2">
+        Build, deploy, and scale autonomous AI workflows.
+      </h1>
+
+      <p class="hero-desc hero-enter hero-enter-d3">
+        Deploy isolated LLM pipelines, multi-model routing, and pgvector persistence on AWS Nitro micro-VMs. No Kubernetes. Sub-second cold starts.
+      </p>
+
+      <div class="hero-ctas hero-enter hero-enter-d4">
+        <button type="button" class="btn-white" id="btn-request-hero">
+          Request Cluster Access
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <div class="cli-copy-bar" id="cli-copy" title="Copy to clipboard">
+          <span class="dollar">$</span>
+          <span id="cli-txt">pnpm add @ripto/sdk</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Bento -->
+  <section class="section" id="features">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <div class="section-tag">Core Primitives</div>
+        <h2 class="section-heading">Engineered for deterministic scale.</h2>
+        <p class="section-sub">Every runtime layer guarantees zero state crosstalk, sub-millisecond boots, and automated multi-cloud failover.</p>
+      </div>
+
+      <div class="bento">
+        <div class="glow-card bento-item reveal reveal-delay-1">
+          <div class="card-spotlight"></div>
+          <div class="bento-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><circle cx="6" cy="6" r="1"/><circle cx="6" cy="18" r="1"/></svg>
+          </div>
+          <h3 class="bento-h">Isolated Micro-VMs</h3>
+          <p class="bento-p">Sub-second sandbox cold starts on AWS EC2 Nitro. Each pipeline runs in a hardware-isolated microkernel with dedicated encrypted memory channels.</p>
+          <div class="bento-metric">
+            <div class="bento-metric-row"><span>Cold Boot</span><span class="metric-val">0.18ms</span></div>
+            <div class="bento-metric-row"><span>Isolation</span><span class="metric-val-white">AES-256-XTS</span></div>
+          </div>
+        </div>
+
+        <div class="glow-card bento-item reveal reveal-delay-2">
+          <div class="card-spotlight"></div>
+          <div class="bento-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+          </div>
+          <h3 class="bento-h">Multi-Model Routing</h3>
+          <p class="bento-p">Automatic failover across AWS Bedrock, Anthropic, and OpenAI. Dynamic rate-limit mitigation and intelligent token cost routing.</p>
+          <div class="bento-metric">
+            <div class="model-pills">
+              <button type="button" class="m-pill on" data-prov="bedrock">Bedrock</button>
+              <button type="button" class="m-pill" data-prov="anthropic">Anthropic</button>
+              <button type="button" class="m-pill" data-prov="openai">OpenAI</button>
+            </div>
+            <div class="bento-metric-row">
+              <span id="prov-model">Claude 3.5 Sonnet</span>
+              <span class="metric-val" id="prov-lat">42ms</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="glow-card bento-item reveal reveal-delay-3">
+          <div class="card-spotlight"></div>
+          <div class="bento-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          </div>
+          <h3 class="bento-h">State & Vector Persistence</h3>
+          <p class="bento-p">Zero-config S3 state snapshots and pgvector indexing. Durable task graph checkpoints for instant warm resume across cluster rebalances.</p>
+          <div class="bento-metric">
+            <div class="bento-metric-row"><span>Vector Engine</span><span class="metric-val-blue">pgvector v0.8</span></div>
+            <div class="bento-metric-row"><span>Checkpoint Restore</span><span class="metric-val">&lt; 1.2ms</span></div>
+          </div>
+        </div>
+
+        <div class="glow-card bento-item reveal reveal-delay-4">
+          <div class="card-spotlight"></div>
+          <div class="bento-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3 class="bento-h">Webhook & Cron Triggers</h3>
+          <p class="bento-p">Deploy workflows as authenticated REST endpoints. Native HMAC verification, idempotency headers, and distributed cron schedulers.</p>
+          <div class="bento-metric">
+            <div class="bento-metric-row"><span>Auth Method</span><span class="metric-val-white">HMAC-SHA256</span></div>
+            <div class="bento-metric-row"><span>Cron Jitter</span><span class="metric-val">&lt; 5ms</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Architecture Topology -->
+  <section class="section" id="architecture">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <div class="section-tag">System Topology</div>
+        <h2 class="section-heading">Zero Kubernetes. Pure deterministic execution.</h2>
+        <p class="section-sub">Follow a request from edge ingress through isolated Nitro sandboxing, model failover, and persistent state settlement.</p>
+      </div>
+
+      <div class="topo-grid reveal">
+        <div class="topo-node">
+          <div class="topo-step"><span>01</span><span>INGRESS</span></div>
+          <div class="topo-title">Edge Gateway</div>
+          <div class="topo-desc">Token auth, HMAC signature checks, and DDoS rate limiting at the edge.</div>
+          <span class="topo-tag">ap-south-1.edge</span>
+        </div>
+        <div class="topo-node">
+          <div class="topo-step"><span>02</span><span>ISOLATION</span></div>
+          <div class="topo-title">Nitro Micro-VM</div>
+          <div class="topo-desc">Ephemeral Linux guest kernel spawned in 0.18ms with zero tenant crosstalk.</div>
+          <span class="topo-tag">nitro-pool.worker-42</span>
+        </div>
+        <div class="topo-node">
+          <div class="topo-step"><span>03</span><span>INFERENCE</span></div>
+          <div class="topo-title">Model Router</div>
+          <div class="topo-desc">Dynamic failover across Bedrock, Anthropic, and OpenAI with token streaming.</div>
+          <span class="topo-tag">router.failover: active</span>
+        </div>
+        <div class="topo-node">
+          <div class="topo-step"><span>04</span><span>PERSISTENCE</span></div>
+          <div class="topo-title">State Ledger</div>
+          <div class="topo-desc">Vector embeddings indexed into pgvector with durable S3 state snapshots.</div>
+          <span class="topo-tag">pgvector.synced</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section" id="pricing">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <div class="section-tag">Pricing</div>
+        <h2 class="section-heading">Transparent pricing for engineering teams.</h2>
+        <p class="section-sub">No hidden egress fees. No cluster orchestration markup. Scale from prototype to enterprise.</p>
+      </div>
+
+      <div class="price-toggle-wrap reveal">
+        <div class="price-toggle">
+          <button type="button" class="price-opt on" data-bill="mo">Monthly</button>
+          <button type="button" class="price-opt" data-bill="yr">Annual</button>
+        </div>
+        <span class="save-tag">Save 20%</span>
+      </div>
+
+      <div class="price-grid">
+        <div class="glow-card price-card reveal reveal-delay-1">
+          <div class="card-spotlight"></div>
+          <div>
+            <div class="plan-name">Hobby / Local</div>
+            <div class="plan-desc">For independent engineers experimenting with autonomous agents.</div>
+            <div class="plan-price"><span class="plan-amt">$0</span><span class="plan-per">/mo</span></div>
+            <ul class="plan-list">
+              <li class="plan-li"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>2 concurrent workflows</span></li>
+              <li class="plan-li"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>10,000 executions/month</span></li>
+              <li class="plan-li"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Shared Nitro sandbox pool</span></li>
+              <li class="plan-li"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Community support</span></li>
+            </ul>
+          </div>
+          <button type="button" class="btn-outline plan-cta" data-tier="Hobby ($0/mo)">Start Free</button>
+        </div>
+
+        <div class="glow-card price-card star reveal reveal-delay-2">
+          <div class="card-spotlight"></div>
+          <span class="rec-badge">Recommended</span>
+          <div>
+            <div class="plan-name">Pro / Startup</div>
+            <div class="plan-desc">For teams running production LLM pipelines with SLA guarantees.</div>
+            <div class="plan-price"><span class="plan-amt" id="pro-amt">$29</span><span class="plan-per" id="pro-per">/mo</span></div>
+            <ul class="plan-list">
+              <li class="plan-li"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Unlimited workflows</span></li>
+              <li class="plan-li"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>250,000 executions included</span></li>
+              <li class="plan-li"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Dedicated VPC peering</span></li>
+              <li class="plan-li"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Custom domains & auto-SSL</span></li>
+              <li class="plan-li"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>99.9% uptime SLA</span></li>
+            </ul>
+          </div>
+          <button type="button" class="btn-white plan-cta" data-tier="Pro ($29/mo)">Request Pro Access</button>
+        </div>
+
+        <div class="glow-card price-card reveal reveal-delay-3">
+          <div class="card-spotlight"></div>
+          <div>
+            <div class="plan-name">Enterprise</div>
+            <div class="plan-desc">For organizations requiring isolated hardware and custom compliance.</div>
+            <div class="plan-price"><span class="plan-amt" id="ent-amt">$99</span><span class="plan-per" id="ent-per">/mo</span></div>
+            <ul class="plan-list">
+              <li class="plan-li"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Custom AWS region deployment</span></li>
+              <li class="plan-li"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>SOC2 Type II audit reports</span></li>
+              <li class="plan-li"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Dedicated support engineer</span></li>
+              <li class="plan-li"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Private single-tenant VPC</span></li>
+            </ul>
+          </div>
+          <button type="button" class="btn-outline plan-cta" data-tier="Enterprise ($99/mo)">Contact Sales</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════ VIEW: LOGIN ═══════════ -->
+<div id="v-login" class="view">
+  <div class="standalone">
+    <div class="glow-card card-box auth">
+      <div class="card-spotlight"></div>
+      <button type="button" class="back-link" data-go="home">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Back
+      </button>
+      <h2 class="card-heading">Sign in</h2>
+      <p class="card-sub">Authenticate to access your workspace cluster and execution graphs.</p>
+
+      <form id="f-login" novalidate>
+        <div class="field">
+          <label for="le">Work Email</label>
+          <input type="email" id="le" placeholder="name@company.com" required autocomplete="email">
+        </div>
+        <div class="field">
+          <label for="lp">Password</label>
+          <input type="password" id="lp" placeholder="••••••••••••" required autocomplete="current-password">
+        </div>
+        <button type="submit" class="btn-white" id="login-btn" style="width:100%;justify-content:center;margin-top:8px">
+          <span id="login-txt">Continue</span>
+          <span id="login-sp" class="spinner" style="display:none"></span>
+        </button>
+      </form>
+
+      <div class="or-divider">or</div>
+
+      <button type="button" class="gh-btn" id="gh-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        Continue with GitHub
+      </button>
+
+      <div class="alert alert-warn" id="gh-notice">GitHub OAuth is undergoing scheduled token migration. Authenticate with your work email.</div>
+      <div class="alert alert-err" id="login-err">Error 403: Workspace not found or pending cluster allocation. If your team recently applied for early access, check your inbox for the invite token.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ VIEW: REQUEST ACCESS ═══════════ -->
+<div id="v-request" class="view">
+  <div class="standalone">
+    <div class="glow-card card-box onboard">
+      <div class="card-spotlight"></div>
+      <button type="button" class="back-link" data-go="home">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Back
+      </button>
+
+      <h2 class="card-heading">Request Cluster Access</h2>
+      <p class="card-sub">We provision isolated micro-VM pools per organization on AWS Nitro. Zero shared memory.</p>
+
+      <form id="f-req" novalidate>
+        <div class="field">
+          <label for="rn">Full Name</label>
+          <input type="text" id="rn" placeholder="Ada Lovelace" required>
+        </div>
+        <div class="field">
+          <label for="re">Work Email</label>
+          <input type="email" id="re" placeholder="name@company.com" required>
+        </div>
+        <div class="field">
+          <label for="rg">GitHub Org or Username</label>
+          <input type="text" id="rg" placeholder="github.com/orgs/acme" required>
+        </div>
+        <div class="field">
+          <label for="rt">Tier</label>
+          <select id="rt">
+            <option value="Pro ($29/mo)">Pro / Startup — $29/mo</option>
+            <option value="Hobby ($0/mo)">Hobby — $0/mo</option>
+            <option value="Enterprise ($99/mo)">Enterprise — $99/mo</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="ru">Primary Use Case</label>
+          <select id="ru" required>
+            <option value="RAG Pipelines">RAG Pipelines</option>
+            <option value="Autonomous Agents">Autonomous Agents</option>
+            <option value="Internal Tooling">Internal Tooling</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-white" id="req-btn" style="width:100%;justify-content:center;margin-top:8px">
+          <span id="req-txt">Submit Request</span>
+          <span id="req-sp" class="spinner" style="display:none"></span>
+        </button>
+      </form>
+
+      <div class="term-box" id="req-ok">
+        <div><span style="color:var(--green)">$</span> ripto-cli request --log</div>
+        <div style="margin-top:6px">Request logged [<span style="color:#7dd3fc">ID: req_94x8a</span>].</div>
+        <div style="margin-top:8px;line-height:1.6">Because we provision isolated AWS compute nodes per workspace, manual verification is enabled. Credentials will be dispatched from <span style="color:#fff">contact@riptodevelops.xyz</span> within 24 hours.</div>
+        <div style="margin-top:16px;display:flex;gap:10px">
+          <button type="button" class="btn-outline" id="copy-rid" style="font-size:12px;padding:5px 12px">Copy Request ID</button>
+          <button type="button" class="btn-secondary" data-go="home" style="font-size:12px;padding:5px 12px">Back to Console</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<!-- ─── COMMAND PALETTE ─── -->
+<div class="cmdk-overlay" id="cmdk">
+  <div class="cmdk-box">
+    <div class="cmdk-search">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+      <input type="text" id="cmdk-in" placeholder="Type a command or search..." autocomplete="off">
+    </div>
+    <ul class="cmdk-list" id="cmdk-list">
+      <li class="cmdk-item sel" data-cmd="home"><div class="cmdk-item-l"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m3 9 9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg><span>Home</span></div></li>
+      <li class="cmdk-item" data-cmd="features"><div class="cmdk-item-l"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/></svg><span>Features</span></div></li>
+      <li class="cmdk-item" data-cmd="architecture"><div class="cmdk-item-l"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/></svg><span>Architecture</span></div></li>
+      <li class="cmdk-item" data-cmd="pricing"><div class="cmdk-item-l"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg><span>Pricing</span></div></li>
+      <li class="cmdk-item" data-cmd="request"><div class="cmdk-item-l"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg><span>Request Access</span></div></li>
+      <li class="cmdk-item" data-cmd="login"><div class="cmdk-item-l"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg><span>Sign In</span></div></li>
+      <li class="cmdk-item" data-cmd="changelog"><div class="cmdk-item-l"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg><span>Changelog</span></div></li>
+    </ul>
+    <div class="cmdk-foot">
+      <span><kbd>↑</kbd> <kbd>↓</kbd> navigate &middot; <kbd>↵</kbd> select</span>
+      <span>ESC to close</span>
+    </div>
+  </div>
+</div>
+
+<!-- ─── MODALS ─── -->
+<div class="modal-overlay" id="m-changelog">
+  <div class="modal-box">
+    <div class="modal-head">
+      <h3 class="modal-title">Changelog</h3>
+      <button type="button" class="modal-x" data-close><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
+    <div class="modal-body">
+      <div style="margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--border)">
+        <div style="display:flex;gap:10px;align-items:center;margin-bottom:8px">
+          <strong style="color:#fff">v1.4.2-beta</strong>
+          <span style="font-family:var(--mono);font-size:12px;color:var(--text-4)">Oct 28, 2026</span>
+        </div>
+        <p>We launched sub-millisecond Nitro micro-VM sandboxing in <code>ap-south-1</code> and upgraded the arm64 hypervisor kernel.</p>
+        <ul><li>Zero-copy guest memory allocation.</li><li>Direct stream decoding for Bedrock Claude 3.5 Sonnet.</li><li>Unified error envelopes across multi-provider fallbacks.</li></ul>
+      </div>
+      <div>
+        <div style="display:flex;gap:10px;align-items:center;margin-bottom:8px">
+          <strong style="color:#fff">v1.4.1-beta</strong>
+          <span style="font-family:var(--mono);font-size:12px;color:var(--text-4)">Oct 14, 2026</span>
+        </div>
+        <p>We stabilized pgvector synchronization with zero-downtime S3 task graph snapshots.</p>
+        <ul><li>Automatic HNSW indexing for batches above 5,000 vectors.</li><li>HMAC webhook signature validation in the edge router.</li></ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="m-privacy">
+  <div class="modal-box">
+    <div class="modal-head">
+      <h3 class="modal-title">Privacy Policy</h3>
+      <button type="button" class="modal-x" data-close><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
+    <div class="modal-body">
+      <p><strong>Effective:</strong> October 2026</p>
+      <p>At Ripto Develops we build deterministic infrastructure for developers. Your code, prompts, and vector payloads remain strictly confidential.</p>
+      <h4>1. Zero Data Retention</h4><p>We do not store prompt payloads, token streams, or inference responses. All transient data in micro-VM sandboxes is flushed upon task completion.</p>
+      <h4>2. Workspace Data</h4><p>We collect work emails, org identifiers, and execution telemetry solely to administer workspaces and allocate micro-VMs.</p>
+      <h4>3. Isolation</h4><p>All compute resides in isolated VPCs on AWS EC2 Nitro. We do not sell, rent, or share workspace data with third parties.</p>
+      <h4>4. Contact</h4><p>For data deletion or compliance inquiries: <code>contact@riptodevelops.xyz</code></p>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="m-terms">
+  <div class="modal-box">
+    <div class="modal-head">
+      <h3 class="modal-title">Terms of Service</h3>
+      <button type="button" class="modal-x" data-close><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
+    <div class="modal-body">
+      <p><strong>Effective:</strong> October 2026</p>
+      <p>These terms govern access to the Ripto Develops platform, APIs, SDKs, and orchestration engine.</p>
+      <h4>1. Acceptable Use</h4><p>Use Ripto Develops compute nodes for lawful AI workflows only. Mining, unauthorized penetration testing, and DoS activities are prohibited.</p>
+      <h4>2. Beta Access</h4><p>Cluster availability is subject to manual verification during beta. We may throttle or terminate accounts that violate resource limits.</p>
+      <h4>3. SLA</h4><p>Pro tier receives 99.9% uptime SLA. Enterprise contracts include custom guarantees with service credits based on hypervisor outage logs.</p>
+      <h4>4. IP Ownership</h4><p>All pipeline definitions, code, vector stores, and execution artifacts remain your exclusive intellectual property.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ─── FOOTER ─── -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-l">
+      <span class="footer-copy">&copy; 2026 Ripto Develops.</span>
+    </div>
+    <ul class="footer-nav">
+      <li><button type="button" id="f-cl">Changelog</button></li>
+      <li><button type="button" id="f-pp">Privacy</button></li>
+      <li><button type="button" id="f-ts">Terms</button></li>
+    </ul>
+    <div class="footer-contact">
+      <a href="mailto:contact@riptodevelops.xyz">contact@riptodevelops.xyz</a>
+    </div>
+  </div>
+</footer>
+
+<script src="/app.js"></script>
+</body>
+</html>

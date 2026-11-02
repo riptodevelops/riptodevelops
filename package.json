@@ -8,7 +8,7 @@
     "start": "node server.mjs",
     "dev": "node server.mjs"
   },
-  "author": "Ritik <ritik@riptodevelops.xyz>",
+  "author": "Ripto Develops <contact@riptodevelops.xyz>",
   "license": "UNLICENSED",
   "engines": {
     "node": ">=18.0.0"

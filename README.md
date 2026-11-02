@@ -47,5 +47,5 @@ Access points:
 ## Contact
 
 - **Domain**: [riptodevelops.xyz](https://riptodevelops.xyz)
-- **Engineering Lead**: Ritik (`ritik@riptodevelops.xyz`)
+- **Contact**: [contact@riptodevelops.xyz](mailto:contact@riptodevelops.xyz)
 - **Version**: `v1.4.2-beta`
